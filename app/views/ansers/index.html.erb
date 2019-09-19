@@ -6,7 +6,7 @@
           <% @anser.each do |anser| %>
             <div class="card">
               <div class="markdown">
-                <%= qiita_markdown(anser.description) %>
+                <%= anser.description %>
               </div>
             </div>
           <% end %>

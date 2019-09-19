@@ -7,16 +7,16 @@
             <div class="card">
               <h4>①聞きたいこと</h4>
               <div class="markdown">
-                <%= qiita_markdown(text.first) %>
+                <%= text.first %>
               </div>
               <h4>②起きている問題</h4>
-              <%= qiita_markdown(text.second) %>
+              <%= text.second %>
               <h4>③ソースコード</h4>
-              <%= qiita_markdown(text.third) %>
+              <%= text.third %>
               <h4>④問題解決のために試したこと</h4>
-              <%= qiita_markdown(text.forth) %>
+              <%= text.forth %>
               <h4>⑤問題について自分なりに考えたこと</h4>
-              <%= qiita_markdown(text.fifth) %>
+              <%= text.fifth %>
               <%= link_to text_path(text.id),method: :delete do %>
                 <h5 class="text-right">削除</h5>
               <% end %>
