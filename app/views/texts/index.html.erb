@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 text-container">
+        <h1 class="text-center text-white">質問一覧</h1>
+          <% @texts.each do |text| %>
+            <div class="card">
+              <h4>①聞きたいこと</h4>
+              <div class="markdown">
+                <%= qiita_markdown(text.first) %>
+              </div>
+              <h4>②起きている問題</h4>
+              <%= qiita_markdown(text.second) %>
+              <h4>③ソースコード</h4>
+              <%= qiita_markdown(text.third) %>
+              <h4>④問題解決のために試したこと</h4>
+              <%= qiita_markdown(text.forth) %>
+              <h4>⑤問題について自分なりに考えたこと</h4>
+              <%= qiita_markdown(text.fifth) %>
+              <%= link_to text_path(text.id),method: :delete do %>
+                <h5 class="text-right">削除</h5>
+              <% end %>
+              <%= link_to new_anser_path(text_id: text.id) do %>
+                <p>回答作成</p>
+              <% end %>
+              <%= link_to anser_path(text.id) do %>
+                <h3 class="text-center">回答一覧:<%= text.ansers.length %>件</h3>
+              <% end %>
+             </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

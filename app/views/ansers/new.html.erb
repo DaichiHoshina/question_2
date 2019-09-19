@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 text-container">
+        <h1 class="text-center text-white">回答作成</h1>
+        <h5 class="text-center text-white">マークダウン記法使用可</h5>
+          <div class="card">
+            <%= form_for @anser do |f| %>
+            <div class="form-group">
+              <%= f.text_area :description, rows:12, class: 'form-control' %>
+              <%= f.hidden_field :text_id, value: params[:text_id] %>
+            </div>
+            <%= f.submit "作成", class: 'btn-block btn-white' %>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

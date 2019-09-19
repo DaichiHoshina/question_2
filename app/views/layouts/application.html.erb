@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>" role="alert"><%= value %>
+      </div>
+    <% end %>
+    
+    <nav class="navbar navbar-default navbar-fixed-top navbar-transparent ">
+      <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+          <%= link_to "質問一覧",texts_path  %>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <%= link_to "質問作成",new_text_path  %>
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
+    
+  <script>
+    $(function(){
+      $(".alert").fadeOut(2000);
+    });
+  </script>
+  </body>
+</html>

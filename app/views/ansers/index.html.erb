@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 text-container">
+        <h1 class="text-center text-white">回答</h1>
+          <% @anser.each do |anser| %>
+            <div class="card">
+              <div class="markdown">
+                <%= qiita_markdown(anser.description) %>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 text-container">
+        <h1 class="text-center text-white">質問作成</h1>
+        <h5 class="text-center text-white">マークダウン記法使用可</h5>
+          <div class="card">
+            <%= form_for @text do |f| %>
+            <div class="form-group">
+              <%= f.label :①聞きたいこと %> 
+              <%= f.text_area :first, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label :②起きている問題 %> 
+              <%= f.text_area :second, rows:8, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label :③ソースコード %> 
+              <%= f.text_area :third, rows:8, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label :④問題解決のために試したこと %> 
+              <%= f.text_area :forth, rows:8, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label :⑤問題について自分なりに考えたこと %> 
+              <%= f.text_area :fifth, rows:8, class: 'form-control' %>
+            </div>
+            <%= f.submit "作成", class: 'btn-block btn-white' %>
+
+            <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
