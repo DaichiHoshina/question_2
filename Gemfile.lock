@@ -262,6 +262,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara (>= 2.15)
+  charlock_holmes
   chromedriver-helper
   coderay
   coffee-rails (~> 4.2)
@@ -279,6 +280,7 @@ DEPENDENCIES
   qiita-markdown
   rails (~> 5.2.3)
   redcarpet (~> 2.3.0)
+  rugged
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

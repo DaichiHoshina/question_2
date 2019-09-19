@@ -37,6 +37,8 @@ gem 'bcrypt'
 gem 'jquery-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'qiita-markdown'
+gem "charlock_holmes"
+gem "rugged"
 gem 'github-linguist'
 gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
