@@ -1,8 +1,6 @@
 # question
 
 queistionは、テンプレートで質問作成するアプリです。
-プログラミング初学者が上達するための良い質問を作る
-助けになれればと思い作成しました。
 
 <img width="875" alt="question" src="https://user-images.githubusercontent.com/50498102/65220970-ed539a80-daf6-11e9-8572-c3311e83b3e6.png">
 
